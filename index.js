@@ -9,7 +9,7 @@ let pets = [{
     tutor: 'Thais',
     conntato: '(81) 98888-8888',
     vacinado: false,
-    serviços: ['banho', 'tosa']
+    servicos: ['banho', 'tosa']
 },
 {
     nome: 'Preta',
@@ -20,7 +20,7 @@ let pets = [{
     tutor: 'Thais',
     conntato: '(81) 98888-8888',
     vacinado: false,
-    serviços: ['banho', 'tosa']
+    servicos: ['banho', 'tosa']
 },
 {
     nome: 'Fany',
@@ -31,7 +31,7 @@ let pets = [{
     tutor: 'Thais',
     conntato: '(81) 98888-8888',
     vacinado: false,
-    serviços: ['banho', 'tosa']
+    servicos: ['banho', 'tosa']
 }
 ];
 
@@ -63,40 +63,44 @@ const vacinacaoPets = () => {
     console.log(`${totalVacinados} animais foram vacinados nessa campannha.`)
 }
 
-const adicionarPet = (nomepet, tipoPet, idadePet, racaPet, pesoPet, tutorPeT, vacinadoPet, servircosPet ) => {
+const adicionarPet = (nome, tipo, idade, raca, peso, tutor, contato, vacinado, servicos ) => {
     novoPet = {
-        nomepet, 
-        tipoPet, 
-        idadePet, 
-        racaPet, 
-        pesoPet, 
-        tutorPeT, 
-        vacinadoPet, 
-        servircosPet 
+        nome, 
+        tipo, 
+        idade, 
+        raca, 
+        peso, 
+        tutor,
+        contato, 
+        vacinado, 
+        servicos
     }
     pets.push(novoPet);
     console.log(pets);
 
 }
 
-adicionarPet('salen', 'gato', 7, 'bruxo', 7, 'thamires', '81 9999-9999', true, '');
+const darBanhoPet = (pet) => {
+    pet.servicos.push('banho');
+    console.log(`O pet ${pet.nome} foi realizado o banho`);
+}
 
+const tosarPet = (pet) => {
+    pet.servicos.push('tosa');
+    console.log(`O pet ${pet.nome} esta com o cabelinho na régua`);
+}
 
-// const adicionarPet = () => {
-//     novoPet = {
-//         nome: 'salen',
-//         tipo: 'gato',
-//         idade: 7,
-//         raca: 'Vira-lata',
-//         peso: 6,
-//         tutor: 'Thais',
-//         conntato: '(81) 98888-8888',
-//         vacinado: false,
-//         serviços: ['banho', 'tosa']
-//     };
-//     pets.push(novoPet);
-//     console.log(pets);
-// }
+const apararUnhasPet = (pet) => {
+    pet.servicos.push('aparar unhas');
+    console.log(`O pet ${pet.nome} esta com com as unhas cortadas`);
+}
+
+adicionarPet('salen', 'gato', 7, 'bruxo', 7, 'thamires','81 88999-9999', true, []);
+darBanhoPet(pets[3]);
+tosarPet(pets[3]);
+apararUnhasPet(pets[3]);
+console.log(pets);
+
 
 // vacinarPet(pets[2]);
 // vacinacaoPets(pets);
