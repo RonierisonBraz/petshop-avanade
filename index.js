@@ -5,7 +5,7 @@ let pets = [{
     tipo: 'cachorro',
     idade: 4,
     raca: 'Vira-lata',
-    peso: 6,
+    peso: 6 ,
     tutor: 'Thais',
     conntato: '(81) 98888-8888',
     vacinado: false,
@@ -16,7 +16,7 @@ let pets = [{
     tipo: 'cachorro',
     idade: 3,
     raca: 'Vira-lata',
-    peso: 6,
+    peso: 6 ,
     tutor: 'Thais',
     conntato: '(81) 98888-8888',
     vacinado: false,
@@ -37,11 +37,9 @@ let pets = [{
 
 const listarPets = () => {
      for(let pet of pets){
-        console.log(`${pet.nome},${pet.idade},${pet.tipo},${pet.raca}`); 
+        console.log(`${pet.nome},${pet.idade + " anos"},${pet.tipo},${pet.raca}, ${pet.peso + " Kg"}`); 
      }
 }
-
-listarPets();
 
 const vacinarPet = (pet) => {
     if (pet.vacinado === true){
@@ -69,7 +67,7 @@ const adicionarPet = (nome, tipo, idade, raca, peso, tutor, contato, vacinado, s
         tipo, 
         idade, 
         raca, 
-        peso, 
+        peso , 
         tutor,
         contato, 
         vacinado, 
@@ -99,8 +97,7 @@ adicionarPet('salen', 'gato', 7, 'bruxo', 7, 'thamires','81 88999-9999', true, [
 darBanhoPet(pets[3]);
 tosarPet(pets[3]);
 apararUnhasPet(pets[3]);
-console.log(pets);
-
+listarPets();
 
 // vacinarPet(pets[2]);
 // vacinacaoPets(pets);
