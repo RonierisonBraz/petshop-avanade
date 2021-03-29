@@ -7,7 +7,7 @@ bancoDados = JSON.parse(bancoDados);
 
 const atualizarBanco = () => {
     //conversão de objeto javascript para Json
-    let petsAtualizado = JSON.stringify(bancoDados,null, 2);
+    let petsAtualizado = JSON.stringify(bancoDados, null, 2);
 
     fs.writeFileSync('bancoDados.json', petsAtualizado, 'utf-8');
 }
@@ -76,10 +76,10 @@ const apararUnhasPet = (pet) => {
 }
 
 //  adicionarPet('salen', 'gato', 7, 'bruxo', 7, 'thamires','81 88999-9999', true, []);
- adicionarPet('Coragem-2', 'cachorro', 7, 'desenho', 7, 'thamires','81 88999-9999', true, []);
-// darBanhoPet(bancoDados.pets[3]);
-// tosarPet(bancoDados.pets[3]);
-// apararUnhasPet(bancoDados.pets[3]);
+//  adicionarPet('Coragem-2', 'cachorro', 7, 'desenho', 7, 'thamires','81 88999-9999', true, []);
+//  darBanhoPet(bancoDados.pets[3]);
+// tosarPet(bancoDados.pets[5]);
+apararUnhasPet(bancoDados.pets[5]);
 
 listarPets();
 

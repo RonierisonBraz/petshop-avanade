@@ -5,8 +5,8 @@
       "tipo": "cachorro",
       "idade": 4,
       "raca": "Vira-lata",
-      " peso": 6,
-      " tutor": "Thais",
+      "peso": 8,
+      "tutor": "Thais",
       "conntato": "(81) 98888-8888",
       "vacinado": false,
       "servicos": [
@@ -51,7 +51,9 @@
       "tutor": "thamires",
       "contato": "81 88999-9999",
       "vacinado": true,
-      "servicos": []
+      "servicos": [
+        "banho"
+      ]
     },
     {
       "nome": "Coragem",
@@ -62,7 +64,9 @@
       "tutor": "thamires",
       "contato": "81 88999-9999",
       "vacinado": true,
-      "servicos": []
+      "servicos": [
+        "tosa"
+      ]
     },
     {
       "nome": "Coragem-2",
@@ -73,7 +77,10 @@
       "tutor": "thamires",
       "contato": "81 88999-9999",
       "vacinado": true,
-      "servicos": []
+      "servicos": [
+        "tosa",
+        "aparar unhas"
+      ]
     }
   ]
 }
