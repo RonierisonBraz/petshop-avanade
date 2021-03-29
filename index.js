@@ -1,4 +1,6 @@
 const fs = require ('fs');
+const moment = require('moment');//biblioteco para apresentar a hora.
+
 let bancoDados = fs.readFileSync('./bancoDados.json');
 
 const nomePetshop = " PETSHOP AVANADE" ;
@@ -15,10 +17,15 @@ const atualizarBanco = () => {
 function listarPets() {
     for (let pet of bancoDados.pets) {
         console.log(`${pet.nome},${pet.idade + " anos"},${pet.tipo},${pet.raca}, ${pet.peso + " Kg"}`);
+
+        (pet.vacinado) ? console.log("vacinado;\n") : console.log("não vacinado;\n");
+        //(parametro a ser estudado) ? alternativa_se_verdadeiro : altervativa_se_falso;
+
     }
 }
 
 const vacinarPet = (pet) => {
+
     if (pet.vacinado === true){
         console.log(`${pet.nome} já está vacinado`);
     }else{
