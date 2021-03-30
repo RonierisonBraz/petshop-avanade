@@ -52,12 +52,16 @@ const atenderCliente = (pet, funcao) => {
 
 const vacinacaoPets = () => {
     totalVacinados = 0;
-    for(let pet of bancoDados.pets){
-        if (pet.vacinado === false){
-            pet.vacinado = true;
-            totalVacinados++;
+
+    
+    bancoDados.pets = bancoDados.pets.map((pet) => {
+        if (!pet.vacinado) {
+            vacinarPet(pet);
+            petVacinadosCampanha++;
         }
-    }
+
+        return pet;
+    });
     console.log(`${totalVacinados} animais foram vacinados nessa campannha.`)
 }
 
@@ -92,11 +96,6 @@ const tosarPet = (pet) => {
     console.log(`O pet ${pet.nome} esta com o cabelinho na régua`);
 }
 
-const apararUnhasPet = (pet) => {
-    pet.servicos.push('aparar unhas');
-    atualizarBanco();
-    console.log(`O pet ${pet.nome} esta com com as unhas cortadas`);
-}
 
 
 
@@ -106,7 +105,7 @@ const apararUnhasPet = (pet) => {
 //  adicionarPet('Coragem-2', 'cachorro', 7, 'desenho', 7, 'thamires','81 88999-9999', true, []);
 //  darBanhoPet(bancoDados.pets[3]);
 // tosarPet(bancoDados.pets[5]);
-apararUnhasPet(bancoDados.pets[5]);
+//apararUnhasPet(bancoDados.pets[5]);
 
 listarPets();
 
