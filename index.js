@@ -96,8 +96,53 @@ const tosarPet = (pet) => {
     console.log(`O pet ${pet.nome} esta com o cabelinho na régua`);
 }
 
+const filtrarTipoPet = (tipoPet) => {
+    // && E - AND
+    // || OU - OR
+    // == verifica valores iguais
+    // === verifica valores e tipos iguais
+    let petsEncontrados = bancoDados.pets.filter((pet) => {
+        return pet.tipo == tipoPet;
+    });
 
+    return petsEncontrados;
+}
 
+const clientePremium = (pet) => {
+    let nServicos = pet.servicos.length;
+
+    if (nServicos > 5) {
+        console.log(`Olá, ${pet.nome}! Você é um cliente especial e ganhou um descontão!`);
+    } else {
+        console.log(`Olá, ${pet.nome}! Você ainda não tem descontos disponiveis!`);
+    }
+}
+
+// darBanhoPet(bancoDados.pets[4]);
+// darBanhoPet(bancoDados.pets[4]);
+// darBanhoPet(bancoDados.pets[4]);
+// darBanhoPet(bancoDados.pets[4]);
+// darBanhoPet(bancoDados.pets[4]);
+// darBanhoPet(bancoDados.pets[4]);
+// clientePremium(bancoDados.pets[4])
+// console.log(buscarPet('Bidu'));
+// console.log(clientePremium(bancoDados.pets[2]));
+
+// campanhaVacina();
+
+// console.log("-----------")
+// listarPets();
+// adicionarPet({
+//     "nome": "Romarinho",
+//     "tipo": "cachorro",
+//     "idade": 3,
+//     "raca": "American",
+//     "peso": 28,
+//     "tutor": "Bruno",
+//     "contato": "(11) 99999-9999",
+//     "vacinado": true,
+//     "servicos": []
+// });
 
 // atenderCliente(bancoDados.pets[4], apararUnhasPet);
 // console.log(bancoDados.pets[4].servicos);
